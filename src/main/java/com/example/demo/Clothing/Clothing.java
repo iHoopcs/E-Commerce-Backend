@@ -12,27 +12,37 @@ public class Clothing {
     private String brand;
     private int price;
     private String imageUrl;
+    private String imageUrl2;
+    private String imageUrl3;
+    private String imageUrl4;
     private int qty;
-
-
+    private String description;
 
     public Clothing(){}
 
-    public Clothing(long id, String name, String brand, int price, String imageUrl, int qty) {
+    public Clothing(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
         this.id = id;
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.imageUrl = imageUrl;
+        this.imageUrl2 = imageUrl2;
+        this.imageUrl3 = imageUrl3;
+        this.imageUrl4 = imageUrl4;
         this.qty = qty;
+        this.description = description;
     }
 
-    public Clothing(String name, String brand, int price, String imageUrl, int qty) {
+    public Clothing(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.imageUrl = imageUrl;
+        this.imageUrl2 = imageUrl2;
+        this.imageUrl3 = imageUrl3;
+        this.imageUrl4 = imageUrl4;
         this.qty = qty;
+        this.description = description;
     }
 
     public long getId() {
@@ -74,6 +84,31 @@ public class Clothing {
     public void setImageUrl(String imageUrl){
         this.imageUrl = imageUrl;
     }
+
+    public String getImageUrl2() {
+        return imageUrl2;
+    }
+
+    public void setImageUrl2(String imageUrl2) {
+        this.imageUrl2 = imageUrl2;
+    }
+
+    public String getImageUrl3() {
+        return imageUrl3;
+    }
+
+    public void setImageUrl3(String imageUrl3) {
+        this.imageUrl3 = imageUrl3;
+    }
+
+    public String getImageUrl4() {
+        return imageUrl4;
+    }
+
+    public void setImageUrl4(String imageUrl4) {
+        this.imageUrl4 = imageUrl4;
+    }
+
     public int getQty() {
         return qty;
     }
@@ -81,6 +116,15 @@ public class Clothing {
     public void setQty(int qty) {
         this.qty = qty;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "Clothing{" +
@@ -89,7 +133,11 @@ public class Clothing {
                 ", brand='" + brand + '\'' +
                 ", price='" + price + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", qty='" + qty +
+                ", imageUrl2='" + imageUrl2 + '\'' +
+                ", imageUrl3='" + imageUrl3 + '\'' +
+                ", imageUrl4='" + imageUrl4 + '\'' +
+                ", qty='" + qty + '\'' +
+                ", description='" + description +
                 '}';
     }
 }
