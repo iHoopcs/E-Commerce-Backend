@@ -17,10 +17,11 @@ public class Clothing {
     private String imageUrl4;
     private int qty;
     private String description;
-
+    private boolean addedToCart;
+    private String itemType;
     public Clothing(){}
 
-    public Clothing(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
+    public Clothing(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description, boolean addedToCart, String itemType) {
         this.id = id;
         this.name = name;
         this.brand = brand;
@@ -31,9 +32,11 @@ public class Clothing {
         this.imageUrl4 = imageUrl4;
         this.qty = qty;
         this.description = description;
+        this.addedToCart = addedToCart;
+        this.itemType = itemType;
     }
 
-    public Clothing(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
+    public Clothing(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description, boolean addedToCart, String itemType) {
         this.name = name;
         this.brand = brand;
         this.price = price;
@@ -43,6 +46,8 @@ public class Clothing {
         this.imageUrl4 = imageUrl4;
         this.qty = qty;
         this.description = description;
+        this.addedToCart = addedToCart;
+        this.itemType = itemType;
     }
 
     public long getId() {
@@ -124,7 +129,20 @@ public class Clothing {
     public void setDescription(String description) {
         this.description = description;
     }
+    public boolean isAddedToCart() {
+        return addedToCart;
+    }
 
+    public void setAddedToCart(boolean addedToCart) {
+        this.addedToCart = addedToCart;
+    }
+    public String getItemType() {
+        return itemType;
+    }
+
+    public void setItemType(String itemType) {
+        this.itemType = itemType;
+    }
     @Override
     public String toString() {
         return "Clothing{" +
@@ -137,7 +155,9 @@ public class Clothing {
                 ", imageUrl3='" + imageUrl3 + '\'' +
                 ", imageUrl4='" + imageUrl4 + '\'' +
                 ", qty='" + qty + '\'' +
-                ", description='" + description +
+                ", description='" + description + '\'' +
+                ", addedToCart='" + addedToCart + '\'' +
+                ", itemType='" + itemType +
                 '}';
     }
 }

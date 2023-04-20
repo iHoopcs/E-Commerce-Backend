@@ -13,24 +13,29 @@ public class Cart {
     private int price;
     private String imageUrl;
     private int qty;
-
+    private boolean addedToCart;
+    private String itemType;
     public Cart(){}
 
-    public Cart(long id, String name, String brand, int price, String imageUrl, int qty) {
+    public Cart(long id, String name, String brand, int price, String imageUrl, int qty, boolean addedToCart, String itemType) {
         this.id = id;
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.imageUrl = imageUrl;
         this.qty = qty;
+        this.addedToCart = addedToCart;
+        this.itemType = itemType;
     }
 
-    public Cart(String name, String brand, int price, String imageUrl, int qty) {
+    public Cart(String name, String brand, int price, String imageUrl, int qty, boolean addedToCart, String itemType) {
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.imageUrl = imageUrl;
         this.qty = qty;
+        this.addedToCart = addedToCart;
+        this.itemType = itemType;
     }
 
     public long getId() {
@@ -79,6 +84,20 @@ public class Cart {
     public void setQty(int qty) {
         this.qty = qty;
     }
+    public boolean isAddedToCart() {
+        return addedToCart;
+    }
+
+    public void setAddedToCart(boolean addedToCart) {
+        this.addedToCart = addedToCart;
+    }
+    public String getItemType() {
+        return itemType;
+    }
+
+    public void setItemType(String itemType) {
+        this.itemType = itemType;
+    }
     @Override
     public String toString() {
         return "Clothing{" +
@@ -87,7 +106,9 @@ public class Cart {
                 ", brand='" + brand + '\'' +
                 ", price='" + price + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", qty='" + qty +
+                ", qty='" + qty + '\'' +
+                ", addedToCart='" + addedToCart + '\'' +
+                ", itemType='" + itemType +
 
                 '}';
     }
