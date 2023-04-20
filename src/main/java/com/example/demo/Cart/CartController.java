@@ -1,9 +1,5 @@
 package com.example.demo.Cart;
 
-import com.example.demo.Accessories.Accessories;
-import com.example.demo.Accessories.AccessoriesRepository;
-import com.example.demo.Clothing.ClothingRepository;
-import com.example.demo.Shoes.ShoesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,15 +8,6 @@ import org.springframework.web.bind.annotation.*;
 public class CartController {
     @Autowired
     CartRepository cartRepository;
-
-    @Autowired
-    AccessoriesRepository accessoriesRepository;
-
-    @Autowired
-    ClothingRepository clothingRepository;
-
-    @Autowired
-    ShoesRepository shoesRepository;
 
     @RequestMapping(path = "/cart", method = RequestMethod.GET)
     public Iterable<Cart> fetchCartItems(){return cartRepository.findAll(); }

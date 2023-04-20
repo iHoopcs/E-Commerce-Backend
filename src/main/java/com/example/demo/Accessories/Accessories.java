@@ -17,11 +17,10 @@ public class Accessories {
         private String imageUrl4;
         private int qty;
         private String description;
-        private boolean addedToCart;
-        private String itemType;
+        
         public Accessories(){}
 
-        public Accessories(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description, boolean addedToCart, String itemType) {
+        public Accessories(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
             this.id = id;
             this.name = name;
             this.brand = brand;
@@ -32,11 +31,9 @@ public class Accessories {
             this.imageUrl4 = imageUrl4;
             this.qty = qty;
             this.description = description;
-            this.addedToCart = addedToCart;
-            this.itemType = itemType;
         }
 
-        public Accessories(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description, boolean addedToCart, String itemType) {
+        public Accessories(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
             this.name = name;
             this.brand = brand;
             this.price = price;
@@ -46,8 +43,6 @@ public class Accessories {
             this.imageUrl4 = imageUrl4;
             this.qty = qty;
             this.description = description;
-            this.addedToCart = addedToCart;
-            this.itemType = itemType;
         }
 
         public long getId() {
@@ -130,22 +125,7 @@ public class Accessories {
             this.description = description;
         }
 
-        public boolean isAddedToCart() {
-            return addedToCart;
-        }
-
-        public void setAddedToCart(boolean addedToCart) {
-            this.addedToCart = addedToCart;
-        }
-        public String getItemType() {
-            return itemType;
-        }
-
-        public void setItemType(String itemType) {
-            this.itemType = itemType;
-        }
-
-    @Override
+        @Override
         public String toString() {
             return "Accessories{" +
                     "id=" + id +
@@ -157,9 +137,7 @@ public class Accessories {
                     ", imageUrl3='" + imageUrl3 + '\'' +
                     ", imageUrl4='" + imageUrl4 + '\'' +
                     ", qty='" + qty + '\'' +
-                    ", description='" + description + '\'' +
-                    ", addedToCart='" + addedToCart + '\'' +
-                    ", itemType='" + itemType +
+                    ", description='" + description +
                     '}';
         }
 }
