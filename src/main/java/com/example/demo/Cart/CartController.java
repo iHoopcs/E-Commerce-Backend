@@ -20,10 +20,7 @@ public class CartController {
 
         //item not already added to cart db table -> save
         if (dbCartItem == null){
-            System.out.println("Adding item to cart...");
             cartRepository.save(cartItem);
-        }else{ //item already in cart db table -> update qty
-            System.out.println("Item Already In Cart!");
         }
     }
 
