@@ -17,10 +17,11 @@ public class Clothing {
     private String imageUrl4;
     private int qty;
     private String description;
+    private String size;
 
     public Clothing(){}
 
-    public Clothing(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
+    public Clothing(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description, String size) {
         this.id = id;
         this.name = name;
         this.brand = brand;
@@ -31,9 +32,10 @@ public class Clothing {
         this.imageUrl4 = imageUrl4;
         this.qty = qty;
         this.description = description;
+        this.size = size;
     }
 
-    public Clothing(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
+    public Clothing(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description, String size) {
         this.name = name;
         this.brand = brand;
         this.price = price;
@@ -43,6 +45,7 @@ public class Clothing {
         this.imageUrl4 = imageUrl4;
         this.qty = qty;
         this.description = description;
+        this.size = size;
     }
 
     public long getId() {
@@ -124,6 +127,12 @@ public class Clothing {
     public void setDescription(String description) {
         this.description = description;
     }
+    public String getSize(){
+        return size;
+    }
+    public void setSize(String newSize){
+        this.size = newSize;
+    }
 
     @Override
     public String toString() {
@@ -137,7 +146,8 @@ public class Clothing {
                 ", imageUrl3='" + imageUrl3 + '\'' +
                 ", imageUrl4='" + imageUrl4 + '\'' +
                 ", qty='" + qty + '\'' +
-                ", description='" + description +
+                ", description='" + description + '\'' +
+                ", size='" + size +
                 '}';
     }
 }

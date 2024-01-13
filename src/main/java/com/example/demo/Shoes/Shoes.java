@@ -17,10 +17,11 @@ public class Shoes {
     private String imageUrl4;
     private int qty;
     private String description;
+    private String size;
     
     public Shoes(){}
 
-    public Shoes(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
+    public Shoes(long id, String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description, String size) {
         this.id = id;
         this.name = name;
         this.brand = brand;
@@ -31,9 +32,10 @@ public class Shoes {
         this.imageUrl4 = imageUrl4;
         this.qty = qty;
         this.description = description;
+        this.size = size;
     }
 
-    public Shoes(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description) {
+    public Shoes(String name, String brand, int price, String imageUrl, String imageUrl2, String imageUrl3, String imageUrl4, int qty, String description, String size) {
         this.name = name;
         this.brand = brand;
         this.price = price;
@@ -43,6 +45,7 @@ public class Shoes {
         this.imageUrl4 = imageUrl4;
         this.qty = qty;
         this.description = description;
+        this.size = size;
     }
 
     public long getId() {
@@ -124,6 +127,12 @@ public class Shoes {
     public void setDescription(String description) {
         this.description = description;
     }
+    public String getSize(){
+        return size;
+    }
+    public void setSize(String newSize){
+        this.size = newSize;
+    }
     @Override
     public String toString() {
         return "Shoes{" +
@@ -136,7 +145,8 @@ public class Shoes {
                 ", imageUrl3='" + imageUrl3 + '\'' +
                 ", imageUrl4='" + imageUrl4 + '\'' +
                 ", qty='" + qty + '\'' +
-                ", description='" + description +
+                ", description='" + description + '\'' +
+                ", size='" + size +
                 '}';
     }
 }

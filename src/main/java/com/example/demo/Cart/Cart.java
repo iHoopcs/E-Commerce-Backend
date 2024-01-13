@@ -13,24 +13,27 @@ public class Cart {
     private int price;
     private String imageUrl;
     private int qty;
+    private String size;
 
     public Cart(){}
 
-    public Cart(long id, String name, String brand, int price, String imageUrl, int qty) {
+    public Cart(long id, String name, String brand, int price, String imageUrl, int qty, String size) {
         this.id = id;
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.imageUrl = imageUrl;
         this.qty = qty;
+        this.size = size;
     }
 
-    public Cart(String name, String brand, int price, String imageUrl, int qty) {
+    public Cart(String name, String brand, int price, String imageUrl, int qty, String size) {
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.imageUrl = imageUrl;
         this.qty = qty;
+        this.size = size;
     }
 
     public long getId() {
@@ -79,6 +82,12 @@ public class Cart {
     public void setQty(int qty) {
         this.qty = qty;
     }
+    public String getSize(){
+        return size;
+    }
+    public void setSize(String newSize){
+        this.size = newSize;
+    }
     @Override
     public String toString() {
         return "Clothing{" +
@@ -87,7 +96,8 @@ public class Cart {
                 ", brand='" + brand + '\'' +
                 ", price='" + price + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", qty='" + qty +
+                ", qty='" + qty + '\'' +
+                ",size='" + size +
 
                 '}';
     }
